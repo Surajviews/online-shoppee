@@ -1,4 +1,4 @@
-package com.srj.shoppingbackend;
+package com.srj.shopingbackend;
 
 /**
  * Hello world!

@@ -7,7 +7,21 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>onlineshoppee Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+  <javaee.version>7.0</javaee.version>
+  </properties>
+  
   <dependencies>
+  <!-- JAVA EE API -->
+  <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>${javaee.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    
+  <!-- JUNIT -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -16,6 +30,19 @@
     </dependency>
   </dependencies>
   <build>
+  
+  <plugins>
+  <!-- Update letest version of java 8 -->
+  <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+        <source>1.8</source>
+        <target>1.8</target>
+        </configuration>
+        </plugin>
+  </plugins>
+  
     <finalName>onlineshoppee</finalName>
   </build>
 </project>
